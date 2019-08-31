@@ -1,0 +1,2 @@
+//org.eclipse.debug.core.PREFERRED_DELEGATES/org.eclipse.jdt.junit.launchconfig=com.experitest.stae.junit.launchconfig,debug,;com.experitest.stae.junit.launchconfig,run,;
+eclipse.preferences.version=1

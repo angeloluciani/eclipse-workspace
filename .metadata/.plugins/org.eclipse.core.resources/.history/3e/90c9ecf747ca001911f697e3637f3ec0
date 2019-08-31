@@ -1,0 +1,76 @@
+/**
+ * 
+ */
+package nets;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ * @author angelo
+ *
+ */
+public class nets {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		
+		/*LETTURA DATI INPUT*/
+        int size = args.length;
+		System.out.println("Argomenti forniti al programma: ");
+		for(int i=0; i<size; i++) {
+			System.out.println(args[i]);
+		}
+
+		/*LETTURA DATI FILE*/
+		System.out.println("");
+		System.out.println("Start to write lista da file: ");
+		System.out.println("");
+		BufferedReader reader = new BufferedReader(new FileReader("C:\\prova\\prova.txt"));
+		String line = reader.readLine();
+		while(line!=null) {
+		     System.out.println(line);
+		     line = reader.readLine();
+		}
+		
+		/*RECURSION*/
+		System.out.println();
+		System.out.println();
+		 int n = (int) factorialUsingRecursion(5);
+		 System.out.println("Il valore della recursione e':");
+		 System.out.println(n);
+		
+		 /*READ DATA IN JAVA*/
+		 System.out.println("read data");
+		 Scanner in = new Scanner(System.in); 
+		  
+		    System.out.println("Insert a string: ==>");
+	        String s = in.nextLine(); 
+	        System.out.println("You entered string "+s); 
+	  
+	        System.out.println("Insert a integer: ==>");
+	        int a = in.nextInt(); 
+	        System.out.println("You entered integer "+a); 
+	  
+	        System.out.println("Insert a float: ==>");
+	        float b = in.nextFloat(); 
+	        System.out.println("You entered float "+b); 
+		 
+	}
+	
+	/*recursion*/
+	public static long factorialUsingRecursion(int n) {
+	    if (n <= 2) {
+	        return n;
+	    }
+	    return n * factorialUsingRecursion(n - 1);
+	}
+
+
+}

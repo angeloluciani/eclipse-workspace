@@ -1,0 +1,32 @@
+package au;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class fts {
+
+	@Test
+	public void test() throws InterruptedException {
+		// Create a new instance of the Firefox driver
+	WebDriver driver;
+	System.setProperty("webdriver.gecko.driver", "C:\\Users\\angelo\\eclipse-workspace\\selenium\\bin\\geckodriver.exe");
+	driver =new FirefoxDriver();
+		
+        //Launch the Online Store Website
+		driver.get("http://www.google.it");
+ 
+        // Print a Log In message to the screen
+        System.out.println("Open google");
+ 
+		//Wait for 5 Sec
+		Thread.sleep(20);
+		
+        // Close the driver
+        driver.quit();
+	}
+
+}

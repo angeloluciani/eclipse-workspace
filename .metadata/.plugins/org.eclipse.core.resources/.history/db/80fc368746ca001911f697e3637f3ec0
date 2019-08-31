@@ -1,0 +1,46 @@
+/**
+ * 
+ */
+package nets;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+/**
+ * @author angelo
+ *
+ */
+public class nets {
+
+	/**
+	 * @param args
+	 * @throws IOException 
+	 */
+	public static void main(String[] args) throws IOException {
+		
+		/*LETTURA DATI INPUT*/
+        int size = args.length;
+		System.out.println("Argomenti forniti al programma: ");
+		for(int i=0; i<size; i++) {
+			System.out.println(args[i]);
+		}
+
+		/*LETTURA DATI FILE*/
+		System.out.println("");
+		System.out.println("Start to write lista da file: ");
+		System.out.println("");
+		BufferedReader reader = new BufferedReader(new FileReader("C:\\prova\\prova.txt"));
+		String line = reader.readLine();
+		while(line!=null) {
+		     System.out.println(line);
+		     line = reader.readLine();
+		}
+		
+	}
+	
+	
+
+
+}

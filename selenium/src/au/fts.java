@@ -1,0 +1,37 @@
+package au;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class fts {
+
+	@Test
+	public void test() throws InterruptedException {
+		// Create a new instance of the Firefox driver
+		//getting the worked directory
+    	System.out.println("Working Directory = " + System.getProperty("user.dir"));
+    	String working_directory = System.getProperty("user.dir");
+    	
+    	String driverpath = working_directory+"\\geckodriver-v0.24.0-win64\\geckodriver.exe";
+        System.setProperty("webdriver.gecko.driver",driverpath);
+        // And now use this to visit Google
+        WebDriver driver = new FirefoxDriver();
+		
+        //Launch the Online Store Website
+		driver.get("http:\\www.google.it");
+ 
+        // Print a Log In message to the screen
+        System.out.println("open google");
+ 
+		//Wait for 5 Sec
+		Thread.sleep(20);
+		
+        // Close the driver
+        driver.quit();
+	}
+
+}
